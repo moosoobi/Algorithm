@@ -1,20 +1,20 @@
-package BOJ.Sorting;
+package BOJ.JAVA.Sorting;
 
-public class InsertSort {
+public class BubbleSort {
     public static void main(String[] args) {
         int[]a = {2,8,3,5,4,2};
-        InsertSort (a);
+        BubbleSort (a);
         for (int j : a) {
             System.out.print(j + " ");
         }
     }
-    public static void InsertSort (int[]a){
-        for(int i=0;i<a.length;i++){
-            int index=i;
-            for(int j=0;j<i;j++){
-                if(a[i]<a[j]){swap(a,index,j);}
+    public static void BubbleSort (int[]a){
+        for(int j=0;j<a.length-1;j++) {
+            for (int i = 0; i < a.length - 1; i++) {
+                if (a[i] > a[i + 1]) swap(a, i, i + 1);
             }
         }
+
     }
     public static void swap(int[]a,int i,int j){
         int temp=a[i];
@@ -22,3 +22,4 @@ public class InsertSort {
         a[j]=temp;
     }
 }
+

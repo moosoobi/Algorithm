@@ -1,4 +1,4 @@
-package BOJ.Sorting;
+package BOJ.JAVA.Sorting;
 
 public class SelectSort {
     public static void main(String[] args) {

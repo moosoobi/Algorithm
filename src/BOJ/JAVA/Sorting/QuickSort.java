@@ -1,4 +1,4 @@
-package BOJ.Sorting;
+package BOJ.JAVA.Sorting;
 
 import java.util.Arrays;
 

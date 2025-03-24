@@ -1,4 +1,4 @@
-package BOJ.DFS;
+package BOJ.JAVA.DFS;
 
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ import java.util.Scanner;
 - 같은 수열은 허용하지 않는다.
 - 수열안에서 같은 숫자가 들어갈 수 없다.
 */
-public class BOJ_15650_완전탐색 {
+public class BOJ_15649_완전탐색 {
     static int N, M;
     static StringBuilder result = new StringBuilder();
 

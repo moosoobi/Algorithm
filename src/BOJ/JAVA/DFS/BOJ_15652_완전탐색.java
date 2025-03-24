@@ -1,4 +1,4 @@
-package BOJ.DFS;
+package BOJ.JAVA.DFS;
 
 import java.util.Scanner;
 
