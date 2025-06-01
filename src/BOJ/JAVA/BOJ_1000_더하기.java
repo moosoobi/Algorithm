@@ -13,6 +13,7 @@ public class BOJ_1000_더하기 {
         int A = in.nextInt();
         int B = in.nextInt();
 
+
         System.out.println(A+B);
 
         in.close();
