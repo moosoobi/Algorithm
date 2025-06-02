@@ -1,6 +1,7 @@
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.*;
 
 public class Main {
     public static int[][] map;
@@ -28,20 +29,25 @@ public class Main {
             }
         }
         result[0][0]=1;
-        dfs(0,0);
+        bfs(0,0);
         System.out.println(result[n-1][m-1]);
 
     }
-    public static void dfs(int x, int y){
-        visited[x][y]=true;
-        for(int i=0;i<4;i++) {
-            int nx=x+dx[i];
-            int ny=y+dy[i];
-            if (nx < n && ny < m && nx >= 0 && ny >= 0) {
-                if (map[nx][ny] == 1 && result[nx][ny]>result[x][y]+1) {
-                    visited[nx][ny] = true;
-                    result[nx][ny]=result[x][y]+1;
-                    dfs(nx,ny);
+
+    public static void bfs(int x,int y){
+        Queue<int[]> queue = new LinkedList<>();
+        queue.offer(new int[] {x,y});
+        while(!queue.isEmpty()){
+            int[] b=queue.poll();
+            for(int i=0;i<4;i++) {
+                int nx = b[0] + dx[i];
+                int ny = b[1] + dy[i];
+                if (nx < n && ny < m && nx >= 0 && ny >= 0) {
+                    if (map[nx][ny] == 1 && visited[nx][ny]==false) {
+                        visited[nx][ny]=true;
+                        queue.offer(new int[] {nx,ny});
+                        result[nx][ny]=result[b[0]][b[1]]+1;
+                    }
                 }
             }
         }
