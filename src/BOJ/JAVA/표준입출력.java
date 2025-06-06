@@ -1,40 +1,31 @@
 package BOJ.JAVA;
 
 import java.io.*;
+import java.util.*;
 
 public class 표준입출력 {
     public static void main(String args[]) throws IOException{
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-//        String[] parts= br.readLine().split(" "); 한줄 숫자 입력 방법
-//        int[] arr =new int[parts.length];
-//        for(int i=0;i<arr.length;i++) {
-//            arr[i]=Integer.parseInt(parts[i]);
+//        Integer[] a= new Integer[] {123,3};
+//        Arrays.sort(a);
+//        for(int i=0;i<a.length;i++){
+//            System.out.println(a[i]);
 //        }
-
-
-//         String str= br.readLine(); 한줄 전체 입력 방법
-//         String[] arr = br.readLine().split(" "); 공백 기준 문자열 배열
-
-        String[] parts= br.readLine().split(" ");
-        int m = Integer.parseInt(parts[0]);
-        int n = Integer.parseInt(parts[1]);
-
-        int[][] map = new int[m][n];
-
-        for(int i=0;i<m;i++){
-            String[] parts1 = br.readLine().split(" ");
-            for(int j=0;j<n;j++){
-                map[i][j]=Integer.parseInt(parts1[j]);
-            }
-        }
-
-        System.out.println("입력된 배열:");
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                System.out.print(map[i][j] + " ");
-            }
-            System.out.println(); // 줄 바꿈
-        }
-
+//        Arrays.sort(a,Collections.reverseOrder());
+//        for(int i=0;i<a.length;i++){
+//            System.out.println(a[i]);
+//        }
+//
+//        //해시
+//        Map<String,Integer> map= new HashMap<>();
+//        map.put("apple",1);
+//        map.remove("apple");
+//        map.get("apple");
+//        map.containsKey("apple");
+//        for(String key:map.keySet()){}
+//        for(Integer key:map.values()){}
+//        for(Map.Entry<String,Integer> entry: map.entrySet()){}
+        int a=2;
+        int b=3;
+        System.out.print((float)a/(float)b);
     }
 }
